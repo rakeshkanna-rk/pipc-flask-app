@@ -1,6 +1,6 @@
 import click
 
-from flaskapp import create_flask
+from pipc_flask_app.flaskapp import create_flask
 from textPlay.colors import *
 
 title = f"{BLUE}PIPCREATOR FLASK APP{RESET}"
