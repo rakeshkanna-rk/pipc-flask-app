@@ -275,10 +275,6 @@ def create_framework_app(directory, proj_name, framework = 'react', script = Non
             print(f"{tic}{proj_name}/server/app.py created successfully.{RESET}")
             time.sleep(0.5)
 
-        template(directory,proj_name,path = os.path.join('server', 'templates'))
-
-        app_static(directory, proj_name,path = os.path.join('server', 'static'))
-
         os.makedirs(os.path.join(directory, 'client'), exist_ok=True)
 
         if framework == 'react' or framework == "reactjs":
@@ -291,7 +287,10 @@ def create_framework_app(directory, proj_name, framework = 'react', script = Non
             app_vite(directory, proj_name)
         
         else:
-            other_framework(directory, proj_name,script = script)
+            if script is not None:
+                other_framework(directory, proj_name,script = script)
+            else:
+                print(f"{error} {RESET}No script provided skipping framework creation")
 
 
         print(f"{MAGENTA}Note: {RESET}Add proxy in your client side package.json")

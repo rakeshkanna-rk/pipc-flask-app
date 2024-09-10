@@ -521,31 +521,42 @@ from textPlay import backend_exec
 from pipcreator.constants import error_msg
 
 def app_react(directory, proj_name):
-
+    if directory == "." or directory == "./":
+        path = os.path.join(directory, proj_name,'client')
+    else:
+        path = os.path.join(proj_name,'client')
     try:
-        backend_exec(f"npx create-react-app@latest {os.path.join(proj_name,'client')}")
+        backend_exec(f"npx create-react-app@latest {path}")
         print(f"{tic}{proj_name}/client created successfully.{RESET}")
     except Exception as e:
         print(error_msg," ",e)
 
 def app_nextjs(directory, proj_name):
+    if directory == "." or directory == "./":
+        path = os.path.join(directory, proj_name,'client')
+    else:
+        path = os.path.join(proj_name,'client')
 
     try:
-        backend_exec(f"npx create-next-app@latest {os.path.join(proj_name,'client')}")
+        backend_exec(f"npx create-next-app@latest {path}")
         print(f"{tic}{proj_name}/client created successfully.{RESET}")
     except Exception as e:
         print(error_msg," ",e)
 
 def app_vite(directory, proj_name):
-
+    if directory == "." or directory == "./":
+        path = os.path.join(directory, proj_name,'client')
+    else:
+        path = os.path.join(proj_name,'client')
     try:
-        backend_exec(f"npx create-vite@latest {os.path.join(proj_name,'client')}")
+        backend_exec(f"npx create-vite@latest {path}")
         print(f"{tic}{proj_name}/client/vite created successfully.{RESET}")
     except Exception as e:
         print(error_msg," ",e)
 
 def other_framework(directory, proj_name, script):
-
+    
+    print("Make sure your script is in the client folder")
     try:
         if script:
             backend_exec(script)
