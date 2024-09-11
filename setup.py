@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="pipc_flask_app",
-    version='0.1.1',
+    version='0.1.2',
     description="A plugin to create flask app for pipCreator.",
     author="Rakesh Kanna",
     author_email='rakeshkanna0108@gmail.com',

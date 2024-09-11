@@ -4,7 +4,7 @@ from string import ascii_lowercase, ascii_uppercase, digits
 
 from pipcreator.constants import *
 from pipcreator.writer import virtual_env, create_pyprojecttoml, create_readme, create_requirements, create_gitignore, create_license
-from pipcreator.flask_constants import * 
+from pipc_flask_app.flask_constants import * 
 from textPlay.colors import *
 from textPlay import list_dir
 
@@ -158,7 +158,7 @@ def create_files_and_folders(directory, description, keywords, author, author_ma
 
     if dependencies:
         print("Creating virtual environment (venv) for safer installation...")
-        if flask_temp == "With React":
+        if flask_temp == "Frameworks":
             venv_status = virtual_env(venv_name=os.path.join(directory, "server", "venv"))
         else:
             venv_status = virtual_env(venv_name=os.path.join(directory,"venv"))

@@ -521,8 +521,8 @@ from textPlay import backend_exec
 from pipcreator.constants import error_msg
 
 def app_react(directory, proj_name):
-    if directory == "." or directory == "./":
-        path = os.path.join(directory, proj_name,'client')
+    if directory == os.getcwd():
+        path = os.path.join('client')
     else:
         path = os.path.join(proj_name,'client')
     try:
@@ -532,8 +532,8 @@ def app_react(directory, proj_name):
         print(error_msg," ",e)
 
 def app_nextjs(directory, proj_name):
-    if directory == "." or directory == "./":
-        path = os.path.join(directory, proj_name,'client')
+    if directory == os.getcwd():
+        path = os.path.join('client')
     else:
         path = os.path.join(proj_name,'client')
 
@@ -544,10 +544,11 @@ def app_nextjs(directory, proj_name):
         print(error_msg," ",e)
 
 def app_vite(directory, proj_name):
-    if directory == "." or directory == "./":
-        path = os.path.join(directory, proj_name,'client')
+    if directory == os.getcwd():
+        path = os.path.join('client')
     else:
-        path = os.path.join(proj_name,'client')
+        path = os.path.join(directory,'client')
+
     try:
         backend_exec(f"npx create-vite@latest {path}")
         print(f"{tic}{proj_name}/client/vite created successfully.{RESET}")

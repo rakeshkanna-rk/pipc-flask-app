@@ -27,3 +27,4 @@ env/
 .vscode/
 dist/
 pipc_flask_app.egg-info/
+build
