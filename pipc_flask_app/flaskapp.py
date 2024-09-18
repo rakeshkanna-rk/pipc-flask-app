@@ -87,7 +87,11 @@ def check_directory(directory, proj_name):
 
 
 
-def create_files_and_folders(directory, description, keywords, author, author_mail, proj_name, licence, dependencies): 
+def create_files_and_folders(
+        directory, description, keywords, 
+        author, author_mail, proj_name, 
+        licence, dependencies
+        ): 
 
     # TEST
     test = input(f"\nDo you want to create a test folder? (y/n) [{CYAN}Y{RESET}] ")
