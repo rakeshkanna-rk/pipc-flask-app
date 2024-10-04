@@ -4,7 +4,7 @@ from string import ascii_lowercase, ascii_uppercase, digits
 
 from pipcreator.constants import *
 from pipcreator.writer import virtual_env, create_pyprojecttoml, create_readme, create_requirements, create_gitignore, create_license
-from pipc_flask_app.flask_constants import * 
+from pipc_flask_app.flask_func import * 
 from textPlay.colors import *
 from textPlay import list_dir
 
@@ -17,8 +17,8 @@ def file_proj_name():
     return proj_name
 
 def create_flask(directory):
-    folder_name = ascii_lowercase + ascii_uppercase + digits + '_./'
 
+    folder_name = ascii_lowercase + ascii_uppercase + digits + '_./'
 
     if "-" in directory:
         print(f"{YELLOW}The ' - ' will be replaced as '_' in the folder name{RESET}")
