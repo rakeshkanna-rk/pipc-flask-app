@@ -322,7 +322,7 @@ if __name__ == "__main__":
 '''
 
 # requirements.txt
-flask_requirements = "Flask==2.3.2 Flask-SQLAlchemy==3.0.3 Flask-Migrate==4.0.4 Flask-WTF==1.0.1 pytest "
+flask_requirements = "Flask==2.3.2 Flask-SQLAlchemy==3.0.3 Flask-Migrate==4.0.4 Flask-WTF==1.0.1 pytest python-dotenv"
 
 # instance/config.py
 instance_config = '''
