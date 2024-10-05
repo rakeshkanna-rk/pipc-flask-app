@@ -1,4 +1,6 @@
-# PipCreator - pipc-flask-app - CND Frameworks
+# PIP CREATOR | FLASK
+
+## CDN Frameworks
 
 ### 1. **Folder Structure**
 
