@@ -3,7 +3,7 @@
 ## Create Flask App
 
 ## Overview
-This Python module automates the creation of all necessary files and folders to set up a Flask application. You can choose between three types of Flask apps: **Basic**, **Advanced**, and **With Framework**. The module also supports additional features like virtual environment creation, git initialization, and CDN framework integration for front-end development.
+This PIP CREATOR Plugin automates the creation of all necessary files and folders to set up a Flask application. You can choose between three types of Flask apps: **Basic**, **Advanced**, and **With Framework**. The plugin also supports additional features like virtual environment creation, git initialization, and CDN framework integration for front-end development.
 
 ## Features
 1. **App Types**:
@@ -132,7 +132,7 @@ Framework options: **React**, **Next.js**, **Vite**. Custom frameworks can be in
 
 ## Installation
 
-1. Clone the repository or download the module.
+1. Install the plugin: `pip install pipc-flask` else `pipc install pipc.flask-app --plugin` if you have pipCreator installed.
 2. Run the script to create the Flask app:
    ```bash
    pipc-flask create <project_name>
