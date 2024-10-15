@@ -235,7 +235,7 @@ def create_files_and_folders(
     time.sleep(0.5)
     check_package_latest("pipCreator")
     if venv_status:
-        print(f"\nHow to Using/Activation virtual environment\n   use: {MAGENTA}pipc guide --see on-venv{RESET}")
+        print(f"\nHow to Using/Activation virtual environment\n   use: {MAGENTA}pipc guide --see on-package{RESET}")
         time.sleep(0.5)
     print(ready_to_code)
     print(f"\n\t {BRIGHT_BLUE}cd{RESET} {directory}\n")

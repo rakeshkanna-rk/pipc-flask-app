@@ -1,6 +1,7 @@
 from pipc_flask_app.flask_constants import *
 import os
 import time
+from pipc_flask_app.images import *
 
 
 # CREATE TEMPLATE =========================================================
@@ -64,6 +65,10 @@ def app_static(directory, proj_name, path= os.path.join('app', 'static')):
         time.sleep(0.5)
 
     os.makedirs(os.path.join(directory, path, 'images'))
+    with open(os.path.join(directory, path, 'images', 'logoDark.svg'), 'w') as f:
+        f.write(pipcreator_logo)
+    with open(os.path.join(directory, path, 'images', 'flask.svg'), 'w') as f:
+        f.write(flask_logo)
     print(f"{tic}{proj_name}/{path}/images/ created successfully.{RESET}")
     time.sleep(0.5)
 

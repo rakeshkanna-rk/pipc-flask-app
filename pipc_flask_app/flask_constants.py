@@ -276,16 +276,12 @@ app_template_layout = '''
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Flask App</title>
+    <title>PipCreator + Flask</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Flask App</h1>
-    </header>
-    <div class="container">
         {% block content %}{% endblock %}
-    </div>
 </body>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </html>
 '''
 
@@ -294,8 +290,27 @@ app_template_home = '''
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>This is the home page.</p>
+    <div class="desktop-1">
+        <div class="content">
+          <div class="logos">
+            <a href="https://pypi.org/project/pipcreator/" target="_blank">
+            <img class="logo" src="{{ url_for('static', filename='images/logoDark.svg') }}" />
+            </a>
+            <a href="https://flask.palletsprojects.com/" target="_blank">
+            <img class="logo" src="{{ url_for('static', filename='images/flask.svg') }}" />
+            </a>
+          </div>
+          <div class="title">PipCreator + Flask</div>
+          <div class="counter">
+            <div class="count">
+                <button id="countup" class="counter2">Count is 0</button>
+            </div>
+            <div class="small-text">
+              Click on the PipCreator and Flask logos to learn more
+            </div>
+          </div>
+        </div>
+      </div>
 {% endblock %}
 '''
 
