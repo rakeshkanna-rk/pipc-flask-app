@@ -28,7 +28,6 @@ def create_flask(directory):
         print(f"{RED}Invalid directory name{RESET}")
         print(f"{YELLOW}Directory name must contain only the following characters:{RESET}")
         print(f"{GREEN}A to Z   {BLUE}a-z   {MAGENTA}0-9 _ \n{RESET}")
-        print(footer)
         sys.exit(1)
 
     if directory == '.' or directory == './':
@@ -62,7 +61,6 @@ def check_directory(directory, proj_name):
 
             elif dir_crt.lower() == 'n':
                 print(f"{RED}Creating project aborted.{RESET}")
-                print(f"\n{footer}")
                 sys.exit(1)
 
             else:
@@ -239,7 +237,6 @@ def create_files_and_folders(
         time.sleep(0.5)
     print(ready_to_code)
     print(f"\n\t {BRIGHT_BLUE}cd{RESET} {directory}\n")
-    print(footer)
 
 
 

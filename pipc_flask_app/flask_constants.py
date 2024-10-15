@@ -253,19 +253,129 @@ class RegistrationForm(FlaskForm):
 
 # app/static/css/style.css
 app_static_css = '''
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+  background: #222222;
 }
 
-h1 {
-    color: #343a40;
+.desktop-1 {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;    /* Vertical centering */
+    height: 100vh;
+    padding: 20px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 82px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 135px;
+  height: 135px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+  filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.5));
+    }
+
+.title {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 38px;
+  line-height: 39px;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+}
+.counter {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.count {
+  border-radius: 13px;
+  border-style: solid;
+  background-color: #222222;
+  border-color: #ffffff;
+  border-width: 1px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.count:hover {
+    filter: drop-shadow(0 0 9px rgba(225, 210, 66, 0.5));
+    border-color: rgba(225, 210, 66, 0.5);
+    
+}
+.counter2 {
+    border-radius: 13px;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  border: none;
+  padding: 15px 20px 15px 20px;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 19px;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.small-text {
+  color: #ffffff80;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 18px;
+  line-height: 19px;
+  position: relative;
+  align-self: stretch;
 }
 '''
 
 # app/static/js/script.js
 app_static_js = '''
-console.log("Hello, World!");
+let count = 0;
+const button = document.getElementById('countup');
+
+button.addEventListener('click', () => {
+  count++;
+  button.textContent = `Count is ${count}`;
+});
 '''
 
 # app/templates/layout.html
